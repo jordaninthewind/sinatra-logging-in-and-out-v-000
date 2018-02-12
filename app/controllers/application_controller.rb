@@ -11,7 +11,10 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
-
+    binding.pry
+    @user = User.find(params[:id])
+    binding.pry
+    redirect '/account'
   end
 
   get '/account' do
@@ -24,4 +27,3 @@ class ApplicationController < Sinatra::Base
 
 
 end
-
